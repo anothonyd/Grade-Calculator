@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/gradefinal.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Grade Calculator</title>
+</head>
+
+<body>
+    <div class="container px-lg-5">
+        <div class="form d-flex flex-column gap-1 pb-2 px-lg-5">
+            <div class="d-flex flex-row justify-content-between align-content-center">
+                <h2 class="fw-bold align-self-end">Average Grade</h2>
+                <a href="javascript:location.reload(true)"><ion-icon name="reload-outline" id="reload"
+                        class="btn fw-bold mb-1"
+                        style="width: 2rem;height: 2rem;border-radius: 5px;"></ion-icon></a>
+            </div>
+            <div class="section">
+                <div class="h5 fw-bold text-center">Student Name</div>
+                <div class="fullname d-flex flex-lg-row justify-content-center column-gap-2 pb-1">
+                    <input type="text" class="w-100 text-center px-3" style="height: 2.5rem;" id="studentName"
+                        placeholder="Enter Full Name">
+                    <button class="btn text-nowrap" style="height: 2.5rem;" onclick="getStudentName()">Display
+                        Name</button>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-end p-0 px-5"
+                style="border-top: 3px solid rgba(0, 0, 0, 0.9);">
+                <div class="h4 fw-bold pt-2">Subjects</div>
+                <h5 class="ps-5 fw-bold">Grade</h5>
+                <h5 class="fw-bold">Remarks</h5>
+            </div>
+            <div class="subject">
+                <label for="mathematics">Mathematics:</label>
+                <input type="number" id="mathematics">
+                <input type="text" id="mathematicsRemarks" placeholder="Remarks">
+            </div>
+            <div class="subject">
+                <label for="english">English:</label>
+                <input type="number" id="english">
+                <input type="text" id="englishRemarks" placeholder="Remarks">
+            </div>
+            <div class="subject">
+                <label for="science">Science:</label>
+                <input type="number" id="science">
+                <input type="text" id="scienceRemarks" placeholder="Remarks">
+            </div>
+            <div class="subject">
+                <label for="history">History:</label>
+                <input type="number" id="history">
+                <input type="text" id="historyRemarks" placeholder="Remarks">
+            </div>
+            <div class="subject">
+                <label for="art">Arts:</label>
+                <input type="number" id="art">
+                <input type="text" id="artRemarks" placeholder="Remarks">
+            </div>
+            <div class="subject">
+                <label for="music">Music:</label>
+                <input type="number" id="music">
+                <input type="text" id="musicRemarks" placeholder="Remarks">
+            </div>
+            <div class="subject">
+                <label for="socialStudies">Social Studies:</label>
+                <input type="number" id="socialStudies">
+                <input type="text" id="socialStudiesRemarks" placeholder="Remarks">
+            </div>
+            <div class="subject">
+                <label for="physicalEducation">Physical Education:</label>
+                <input type="number" id="physicalEducation">
+                <input type="text" id="physicalEducationRemarks" placeholder="Remarks">
+            </div>
+            <div class="remarks d-flex text-nowrap justify-content-evenly pt-4"
+                style="border-top: 3px solid rgba(0, 0, 0, 0.9);">
+                <div class="p-0">
+                    <button class="btn" onclick="getAverage()">Compute Grade</button>
+                </div>
+                <div class="wrapper d-flex">
+                    <div class="eval d-flex flex-lg-row p-1">
+                        <p for="averageGrade" class="d-flex align-items-center fw-bolder m-2 pe-1">Average Grade:</p>
+                        <input type="text" class="d-flex align-items-center w-100 fw-bolder text-center"
+                            style="height: 3rem;" id="averageGrade">
+                    </div>
+                    <div class="eval d-flex flex-lg-row p-1">
+                        <p for="textGrade" class="d-flex align-items-center fw-bolder m-2 pe-1">Remarks:</p>
+                        <input type="text" class="d-flex align-items-center w-100 fw-bolder text-center"
+                            style="height: 3rem;" id="textGrade">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/bootstrap-5.3.0-alpha3-dist/js/bootstrap.js"></script>
+    <script src="./js/gradefinal.js"></script>
+</body>
+
+</html>
